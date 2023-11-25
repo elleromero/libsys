@@ -1,4 +1,5 @@
 -- DO NOT MODIFY THIS QUERY
+-- CREATE DATABASE Testing_DB; --
 USE Testing_DB;
 
 IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'genres')
@@ -71,7 +72,7 @@ CREATE TABLE books(
 );
 END
 
--- ADD COLUMN sources_id --
+-- ADD COLUMN sources_id i changes the foreign key of book_id into book_metadata--
 IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'copies')
 BEGIN 
 CREATE TABLE copies (
@@ -80,7 +81,7 @@ CREATE TABLE copies (
 	source_id INT NOT NULL,
 	status_id INT NOT NULL,
 	price MONEY NOT NULL,
-	FOREIGN KEY (book_id) REFERENCES books(book_id) ON DELETE CASCADE,
+	FOREIGN KEY (book_id) REFERENCES book_metadata(metadata_id) ON DELETE CASCADE,
 	FOREIGN KEY (status_id) REFERENCES statuses(status_id),
 	FOREIGN KEY (source_id) REFERENCES sources(source_id)
 )
@@ -239,4 +240,6 @@ INSERT INTO users (username, password_hash, profile_picture, role_id, member_id)
 	1,
 	@member_id
 );
+
+
 

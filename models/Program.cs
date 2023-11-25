@@ -9,7 +9,7 @@ namespace libsys.models
     public class Program
     {
 
-        public int ProgramID { get; set; }
+        public int ID { get; set; }
         public string? Name { get; set; } = string.Empty;
         public string? Description { get; set; } = string.Empty;
 
