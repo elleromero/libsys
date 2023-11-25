@@ -14,7 +14,7 @@ namespace libsys.src.services
             // TODO: Show a form when this failed
             await SeedBuilder.Initialize();
             await SeedBuilder.SeedSetup();
-            // await SeedBuilder.SeedInitialData();
+            await SeedBuilder.SeedInitialData();
         }
     }
 }
