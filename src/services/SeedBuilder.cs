@@ -28,7 +28,7 @@ namespace libsys.src.services
 
         public static async Task<bool> SeedInitialData()
         {
-            return await SeedData("../../../queries/seeds/initial_seed.sql");
+            return await SeedData("../../../queries/seeds/initial_seed.sql", true);
         }
 
         public static async Task<bool> SeedData(string queryPath, bool useBase = false)

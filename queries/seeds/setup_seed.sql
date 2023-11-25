@@ -81,7 +81,7 @@ CREATE TABLE copies (
 	source_id INT NOT NULL,
 	status_id INT NOT NULL,
 	price MONEY NOT NULL,
-	FOREIGN KEY (book_id) REFERENCES book_metadata(metadata_id) ON DELETE CASCADE,
+	FOREIGN KEY (book_id) REFERENCES books(book_id) ON DELETE CASCADE,
 	FOREIGN KEY (status_id) REFERENCES statuses(status_id),
 	FOREIGN KEY (source_id) REFERENCES sources(source_id)
 )
@@ -240,6 +240,4 @@ INSERT INTO users (username, password_hash, profile_picture, role_id, member_id)
 	1,
 	@member_id
 );
-
-
 
