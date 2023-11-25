@@ -1,3 +1,4 @@
+using libsys.src.services;
 using libsys.views.pages;
 
 namespace libsys
@@ -13,7 +14,7 @@ namespace libsys
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            // Application.Run(new Form1());
+            DbService.Start();
             Application.Run(new Login());
         }
     }
