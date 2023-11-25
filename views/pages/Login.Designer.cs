@@ -85,12 +85,12 @@
             // RegisterLinkLabel
             // 
             RegisterLinkLabel.AutoSize = true;
-            RegisterLinkLabel.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            RegisterLinkLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             RegisterLinkLabel.LinkBehavior = LinkBehavior.HoverUnderline;
             RegisterLinkLabel.LinkColor = Color.White;
-            RegisterLinkLabel.Location = new Point(685, 393);
+            RegisterLinkLabel.Location = new Point(365, 392);
             RegisterLinkLabel.Name = "RegisterLinkLabel";
-            RegisterLinkLabel.Size = new Size(91, 17);
+            RegisterLinkLabel.Size = new Size(90, 17);
             RegisterLinkLabel.TabIndex = 12;
             RegisterLinkLabel.TabStop = true;
             RegisterLinkLabel.Text = "Register Here";

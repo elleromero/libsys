@@ -21,7 +21,7 @@ namespace libsys.views.pages
 
         private void RegisterLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Register register = new(this);
+            Register register = new Register();
             register.ShowDialog();
         }
     }

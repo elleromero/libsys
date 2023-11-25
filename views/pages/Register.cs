@@ -12,7 +12,7 @@ namespace libsys.views.pages
 {
     public partial class Register : Form
     {
-        public Register(Login login)
+        public Register()
         {
             InitializeComponent();
         }
